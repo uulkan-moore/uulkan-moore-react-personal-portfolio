@@ -24,6 +24,7 @@ import { useState, useEffect } from "react"; // For state management and side ef
 import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa"; // Social media icons
 import { HiOutlineMail } from "react-icons/hi"; // Email icon
 import { IoMoon, IoSunny } from "react-icons/io5"; // Theme toggle icons
+import Image from "next/image"; // Next.js optimized Image component
 import {
   AppBar, // Top navigation bar
   Box, // Basic layout container
@@ -136,6 +137,7 @@ export default function Home() {
       backdropFilter: 'blur(12px)', // Blur effect
       backgroundColor: darkMode ? 'rgba(19, 47, 76, 0.8)' : 'rgba(255, 255, 255, 0.8)', // Semi-transparent bg
       boxShadow: darkMode ? '0 4px 30px rgba(0, 0, 0, 0.1)' : '0 4px 30px rgba(0, 0, 0, 0.05)', // Subtle shadow
+      borderRadius: '0px',
     },
     // Hero section (top intro area)
     heroSection: {
@@ -368,7 +370,9 @@ export default function Home() {
                   ml: 2,
                   borderLeft: { xs: 'none', md: '1px solid' }, // Divider line (hidden on mobile)
                   borderColor: 'divider',
-                  pl: { xs: 0, md: 2 }
+                  borderRight: { xs: 'none', md: '1px solid' },
+                  pl: { xs: 0, md: 2 },
+                  pr: { xs: 0, md: 2 }
                 }}>
                   {/* GitHub link */}
                   <IconButton 
@@ -433,9 +437,6 @@ export default function Home() {
                   display: 'flex', 
                   alignItems: 'center',
                   ml: 2,
-                  borderLeft: { xs: 'none', md: '1px solid' },
-                  borderColor: 'divider',
-                  pl: { xs: 0, md: 2 }
                 }}>
                   <IconButton 
                     onClick={() => setDarkMode(!darkMode)} 
@@ -494,7 +495,6 @@ export default function Home() {
                 <Typography 
                   variant="h6" 
                   color="text.secondary" 
-                  paragraph
                   sx={{ fontSize: '1.1rem', mt: 3, mb: 4 }}
                 >
                   I create sophisticated web applications that deliver exceptional
@@ -548,14 +548,7 @@ export default function Home() {
                     }
                   }}
                 >
-                  {/* Profile image */}
-                  {/* <Image 
-                    src="/profile.jpg" 
-                    alt="John Doe" 
-                    fill 
-                    style={{ objectFit: 'cover' }}
-                    priority
-                  /> */}
+                  {/* You can put a picture of yourself here, or keep it empty/remove the circle.  */}
                 </Box>
               </MuiGrid>
             </MuiGrid>
