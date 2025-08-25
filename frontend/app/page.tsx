@@ -49,13 +49,6 @@ import {
   useMediaQuery, // Hook to check media queries
 } from "@mui/material";
 
-// Create a custom Grid component that doesn't use the 'item' prop
-// This helps us avoid TypeScript errors with the MUI Grid component
-function Grid(props) {
-  const { children, ...other } = props;
-  return <MuiGrid {...other}>{children}</MuiGrid>;
-}
-
 // Main component for the entire page
 export default function Home() {
   // Check if user's system prefers dark mode
@@ -470,7 +463,7 @@ export default function Home() {
           <Container maxWidth="lg" sx={{ position: "relative", zIndex: 1 }}>
             <MuiGrid container spacing={6} alignItems="center">
               {/* Left side - Text content */}
-              <MuiGrid xs={12} md={6} sx={{ mb: { xs: 4, md: 0 } }}>
+              <MuiGrid sx={{ mb: { xs: 4, md: 0 } }}>
                 {/* Name and title */}
                 <Typography 
                   variant="h2" 
@@ -534,7 +527,7 @@ export default function Home() {
                 </Box>
               </MuiGrid>
               {/* Right side - Profile image */}
-              <MuiGrid xs={12} md={6} sx={{ textAlign: "center" }}>
+              <MuiGrid sx={{ textAlign: "center" }}>
                 <Box
                   sx={{
                     position: "relative",
@@ -792,7 +785,7 @@ export default function Home() {
             >
               <MuiGrid container spacing={6}>
                 {/* Left column - Frontend skills */}
-                <MuiGrid xs={12} md={6}>
+                <MuiGrid>
                   <Typography 
                     variant="h5" 
                     component="h3" 
@@ -815,40 +808,10 @@ export default function Home() {
                   >
                     Frontend Development
                   </Typography>
-                  
-                  {/* Frontend skills progress bars */}
-                  <Box sx={{ mb: 5 }}>
-                    {frontendSkills.map((skill, index) => (
-                      <Box key={index} sx={{ mb: 4 }}>
-                        <Box sx={styles.skillLabel}>
-                          <Typography 
-                            variant="body1" 
-                            color="text.primary"
-                            fontWeight={500}
-                          >
-                            {skill.name}
-                          </Typography>
-                          <Typography 
-                            variant="body2" 
-                            color="text.secondary"
-                            fontWeight={500}
-                          >
-                            {skill.value}%
-                          </Typography>
-                        </Box>
-                        <LinearProgress
-                          variant="determinate"
-                          value={skill.value}
-                          sx={styles.skillProgress}
-                          classes={{ bar: styles.skillProgressBar }}
-                        />
-                      </Box>
-                    ))}
-                  </Box>
                 </MuiGrid>
                 
                 {/* Right column - Backend skills */}
-                <MuiGrid xs={12} md={6}>
+                <MuiGrid>
                   <Typography 
                     variant="h5" 
                     component="h3" 
@@ -988,7 +951,7 @@ export default function Home() {
             
             <MuiGrid container spacing={4}>
               {/* Left column - Contact information */}
-              <MuiGrid xs={12} md={6}>
+              <MuiGrid>
                 <Typography 
                   variant="body1" 
                   color="text.secondary"
@@ -1075,7 +1038,7 @@ export default function Home() {
               </MuiGrid>
               
               {/* Right column - Contact form */}
-              <MuiGrid xs={12} md={6}>
+              <MuiGrid>
                 <Paper 
                   elevation={darkMode ? 1 : 3} 
                   sx={{ 
