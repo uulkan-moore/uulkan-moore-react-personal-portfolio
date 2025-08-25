@@ -51,7 +51,7 @@ export default function Home() {
   // Check if user's system prefers dark mode
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
   // State to track if dark mode is active
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
 
   // Update dark mode when system preference changes
   useEffect(() => {
