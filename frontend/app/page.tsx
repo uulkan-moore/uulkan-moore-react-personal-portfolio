@@ -286,6 +286,13 @@ export default function Home() {
     },
   ];
 
+  // Frontend skills with proficiency levels
+  const frontendSkills = [
+    { name: "React / Next.js", value: 95 },
+    { name: "TypeScript", value: 90 },
+    { name: "UI/UX Design", value: 85 },
+  ];
+
   // Backend skills with proficiency levels
   const backendSkills = [
     { name: "Node.js / Express", value: 85 },
@@ -468,7 +475,7 @@ export default function Home() {
                     lineHeight: 1.2,
                   }}
                 >
-                  Hi, I&apos;m John Doe
+                  Hi, I'm John Doe
                   {/* Job title with gradient effect */}
                   <Typography
                     variant="h2"
@@ -544,13 +551,14 @@ export default function Home() {
                     }
                   }}
                 >
-                  <Image 
+                  {/* Profile image */}
+                  {/* <Image 
                     src="/profile.jpg" 
                     alt="John Doe" 
                     fill 
                     style={{ objectFit: 'cover' }}
                     priority
-                  />
+                  /> */}
                 </Box>
               </MuiGrid>
             </MuiGrid>
@@ -665,21 +673,6 @@ export default function Home() {
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
               {projectsData.map((project, index) => (
                 <Card key={index} sx={styles.projectCard} elevation={darkMode ? 1 : 2}>
-                  {/* Project image */}
-                  <CardMedia
-                    component="img"
-                    height="240"
-                    image={project.image}
-                    alt={project.title}
-                    sx={{ 
-                      objectFit: 'cover',
-                      transition: 'transform 0.3s ease',
-                      '&:hover': {
-                        transform: 'scale(1.05)',
-                      },
-                    }}
-                  />
-                  
                   {/* Card content - title, description, technologies */}
                   <CardContent sx={{ flexGrow: 1 }}>
                     <Typography variant="h5" component="h3" fontWeight="bold" gutterBottom>
@@ -801,6 +794,21 @@ export default function Home() {
                   >
                     Frontend Development
                   </Typography>
+                  <Box sx={{ mb: 5 }}>
+                    {frontendSkills.map((skill, index) => (
+                      <Box key={index} sx={{ mb: 4 }}>
+                        <Box sx={styles.skillLabel}>
+                          <Typography 
+                            variant="body1" 
+                            color="text.primary"
+                            fontWeight={500}
+                          >
+                            {skill.name}
+                          </Typography>
+                        </Box>
+                      </Box>
+                    ))}
+                  </Box>
                 </MuiGrid>
                 
                 {/* Right column - Backend skills */}
@@ -840,24 +848,7 @@ export default function Home() {
                           >
                             {skill.name}
                           </Typography>
-                          <Typography 
-                            variant="body2" 
-                            color="text.secondary"
-                            fontWeight={500}
-                          >
-                            {skill.value}%
-                          </Typography>
                         </Box>
-                        <LinearProgress
-                          variant="determinate"
-                          value={skill.value}
-                          sx={{
-                            ...styles.skillProgress,
-                            '& .MuiLinearProgress-bar': {
-                              backgroundImage: 'linear-gradient(to right, #ff006e, #8338ec)',
-                            },
-                          }}
-                        />
                       </Box>
                     ))}
                   </Box>
