@@ -286,13 +286,6 @@ export default function Home() {
     },
   ];
 
-  // Frontend skills with proficiency levels
-  const frontendSkills = [
-    { name: "React / Next.js", value: 95 },
-    { name: "TypeScript", value: 90 },
-    { name: "UI/UX Design", value: 85 },
-  ];
-
   // Backend skills with proficiency levels
   const backendSkills = [
     { name: "Node.js / Express", value: 85 },
@@ -475,7 +468,7 @@ export default function Home() {
                     lineHeight: 1.2,
                   }}
                 >
-                  Hi, I'm John Doe
+                  Hi, I&apos;m John Doe
                   {/* Job title with gradient effect */}
                   <Typography
                     variant="h2"
@@ -619,7 +612,7 @@ export default function Home() {
               >
                 Previously, I worked at XYZ Technologies where I led the frontend development team,
                 improving application performance by 40% and implementing CI/CD pipelines that reduced
-                deployment time by 65%. I'm passionate about sharing knowledge and have contributed to
+                deployment time by 65%. I&apos;m passionate about sharing knowledge and have contributed to
                 several open-source projects.
               </Typography>
               
@@ -898,7 +891,7 @@ export default function Home() {
                 
                 {/* Technology tags */}
                 <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1.5 }}>
-                  {otherTechnologies.map((tech, index) => (
+                  {otherTechnologies.map((tech) => (
                     <Box 
                       key={tech} 
                       component="span" 
@@ -958,7 +951,7 @@ export default function Home() {
                   paragraph
                   sx={{ mb: 3 }}
                 >
-                  I'm currently looking for new opportunities and freelance projects. If you'd like to
+                  I&apos;m currently looking for new opportunities and freelance projects. If you&apos;d like to
                   discuss a potential collaboration or just want to say hi, feel free to reach out!
                 </Typography>
                 
