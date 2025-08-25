@@ -20,7 +20,6 @@
  */
 
 // Import necessary libraries and components
-import Image from "next/image"; // For optimized image handling
 import { useState, useEffect } from "react"; // For state management and side effects
 import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa"; // Social media icons
 import { HiOutlineMail } from "react-icons/hi"; // Email icon
@@ -32,14 +31,12 @@ import {
   Card, // Card components for projects
   CardActions, // Bottom section of cards for buttons
   CardContent, // Main content area of cards
-  CardMedia, // Media section of cards (for images)
   Container, // Centered, width-limited container
   createTheme, // Function to create a theme
   CssBaseline, // Resets CSS to a consistent baseline
   Divider, // Horizontal line separator
   Grid as MuiGrid, // Layout grid system
   IconButton, // Button with just an icon
-  LinearProgress, // Progress bars for skills
   Link, // Hyperlink component
   Paper, // Elevated surfaces
   TextField, // Text input fields
