@@ -473,7 +473,7 @@ export default function Home() {
                     lineHeight: 1.2,
                   }}
                 >
-                  Hi, I&apos;m John Doe
+                  Hi, I&apos;m Uulkan Moore
                   {/* Job title with gradient effect */}
                   <Typography
                     variant="h2"
