@@ -327,7 +327,7 @@ export default function Home() {
             <Toolbar sx={{ justifyContent: "space-between" }}>
               {/* Your name/logo */}
               <Typography variant="h6" fontWeight="bold" color="text.primary">
-                <Box component="span" sx={{ color: theme.palette.primary.main }}>John</Box>Doe
+                <Box component="span" sx={{ color: theme.palette.primary.main }}>Uulkan</Box>Moore
               </Typography>
               
               <Box sx={{ display: 'flex', alignItems: 'center' }}>
@@ -376,7 +376,7 @@ export default function Home() {
                 }}>
                   {/* GitHub link */}
                   <IconButton 
-                    href="https://github.com/johndoe" 
+                    href="https://github.com/uulkan-moore" 
                     target="_blank"
                     rel="noopener noreferrer"
                     color="inherit"
@@ -395,7 +395,7 @@ export default function Home() {
                   
                   {/* LinkedIn link */}
                   <IconButton 
-                    href="https://linkedin.com/in/johndoe" 
+                    href="https://linkedin.com/in/uulkan-ryskulova" 
                     target="_blank"
                     rel="noopener noreferrer"
                     color="inherit"
@@ -412,24 +412,7 @@ export default function Home() {
                     <FaLinkedinIn />
                   </IconButton>
                   
-                  {/* Twitter link */}
-                  <IconButton 
-                    href="https://twitter.com/johndoe" 
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    color="inherit"
-                    size="small"
-                    sx={{ 
-                      mx: 0.5,
-                      transition: 'transform 0.2s, color 0.2s',
-                      '&:hover': {
-                        color: '#1da1f2',
-                        transform: 'translateY(-3px)'
-                      }
-                    }}
-                  >
-                    <FaTwitter />
-                  </IconButton>
+                 
                 </Box>
 
                 {/* Dark/light mode toggle */}
@@ -548,7 +531,15 @@ export default function Home() {
                     }
                   }}
                 >
-                  {/* You can put a picture of yourself here, or keep it empty/remove the circle.  */}
+                  {/* Profile image */}
+                  <Image
+                    src="/profile_pic.jpg"
+                    alt="Profile picture of Uulkan Moore"
+                    width={360}
+                    height={360}
+                    style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+                    priority
+                  />
                 </Box>
               </MuiGrid>
             </MuiGrid>
@@ -976,7 +967,7 @@ export default function Home() {
                       <FaGithub />
                     </IconButton>
                     <IconButton 
-                      href="https://linkedin.com/in/johndoe" 
+                      href="https://linkedin.com/in/uulkan-ryskulova" 
                       target="_blank"
                       rel="noopener noreferrer"
                       color="inherit"
