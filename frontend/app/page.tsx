@@ -36,7 +36,7 @@ import {
   createTheme, // Function to create a theme
   CssBaseline, // Resets CSS to a consistent baseline
   Divider, // Horizontal line separator
-  Grid, // Layout grid system
+  //Grid, // Layout grid system
   IconButton, // Button with just an icon
   Link, // Hyperlink component
   Paper, // Elevated surfaces
@@ -46,6 +46,8 @@ import {
   Typography, // Text component with different variants
   useMediaQuery, // Hook to check media queries
 } from "@mui/material";
+
+import Grid from '@mui/material/Grid'; // Layout grid system
 
 // Main component for the entire page
 export default function Home() {
@@ -451,7 +453,7 @@ export default function Home() {
           <Container maxWidth="lg" sx={{ position: "relative", zIndex: 1 }}>
             <Grid container spacing={6} alignItems="center">
               {/* Left side - Text content */}
-              <Grid xs={12} md={6} sx={{ mb: { xs: 4, md: 0 } }}>
+              <Grid size={{ xs: 12, md: 6, }} sx={{ mb: { xs: 4, md: 0 } }}>
                 {/* Name and title */}
                 <Typography 
                   variant="h2" 
@@ -514,7 +516,7 @@ export default function Home() {
                 </Box>
               </Grid>
               {/* Right side - Profile image */}
-              <Grid xs={12} md={6} sx={{ textAlign: "center" }}>
+              <Grid size={{ xs: 12, md: 6}} sx={{ textAlign: "center" }}>
                 <Box
                   sx={{
                     position: "relative",
@@ -746,7 +748,7 @@ export default function Home() {
             <Divider sx={styles.divider} />
             {/* Skills and Hobbies side by side */}
             <Grid container spacing={6}>
-              <Grid xs={12} md={8}>
+              <Grid size={{xs: 12, md: 8}} >
                 <Paper 
                   elevation={darkMode ? 1 : 3} 
                   sx={{ 
@@ -759,7 +761,7 @@ export default function Home() {
                 >
                   <Grid container spacing={6}>
                     {/* Left column - Frontend skills */}
-                    <Grid item xs={12} sm={6}>
+                    <Grid size={{xs: 12, md: 6}}>
                       <Typography 
                         variant="h5" 
                         component="h3" 
@@ -799,7 +801,7 @@ export default function Home() {
                       </Box>
                     </Grid>
                     {/* Right column - Backend skills */}
-                    <Grid xs={12} sm={6}>
+                    <Grid size={{xs: 12, md: 6}}>
                       <Typography 
                         variant="h5" 
                         component="h3" 
@@ -887,7 +889,7 @@ export default function Home() {
                   </Box>
                 </Paper>
               {/* Hobbies column */}
-              <Grid xs={12} md={4}>
+              <Grid size={{xs: 12, md: 4}}>
                 <Paper 
                   elevation={darkMode ? 1 : 3} 
                   sx={{ 
@@ -955,7 +957,7 @@ export default function Home() {
             
             <Grid container spacing={4}>
               {/* Left column - Contact information */}
-              <Grid xs={12} md={6}>
+              <Grid size={{xs: 12, md: 6}}>
                 <Typography 
                   variant="body1" 
                   color="text.secondary"
@@ -1039,7 +1041,7 @@ export default function Home() {
                 </Box>
               </Grid>
               {/* Right column - Contact form */}
-              <Grid xs={12} md={6}>
+              <Grid size={{xs: 12, md: 6}}>
                 <Paper 
                   elevation={darkMode ? 1 : 3} 
                   sx={{ 
