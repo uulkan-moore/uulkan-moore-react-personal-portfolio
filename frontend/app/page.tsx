@@ -451,7 +451,7 @@ export default function Home() {
           <Container maxWidth="lg" sx={{ position: "relative", zIndex: 1 }}>
             <Grid container spacing={6} alignItems="center">
               {/* Left side - Text content */}
-              <Grid item xs={12} md={6} sx={{ mb: { xs: 4, md: 0 } }}>
+              <Grid xs={12} md={6} sx={{ mb: { xs: 4, md: 0 } }}>
                 {/* Name and title */}
                 <Typography 
                   variant="h2" 
@@ -514,7 +514,7 @@ export default function Home() {
                 </Box>
               </Grid>
               {/* Right side - Profile image */}
-              <Grid item xs={12} md={6} sx={{ textAlign: "center" }}>
+              <Grid xs={12} md={6} sx={{ textAlign: "center" }}>
                 <Box
                   sx={{
                     position: "relative",
@@ -746,7 +746,7 @@ export default function Home() {
             <Divider sx={styles.divider} />
             {/* Skills and Hobbies side by side */}
             <Grid container spacing={6}>
-              <Grid item xs={12} md={8}>
+              <Grid xs={12} md={8}>
                 <Paper 
                   elevation={darkMode ? 1 : 3} 
                   sx={{ 
@@ -799,7 +799,7 @@ export default function Home() {
                       </Box>
                     </Grid>
                     {/* Right column - Backend skills */}
-                    <Grid item xs={12} sm={6}>
+                    <Grid xs={12} sm={6}>
                       <Typography 
                         variant="h5" 
                         component="h3" 
@@ -887,7 +887,7 @@ export default function Home() {
                   </Box>
                 </Paper>
               {/* Hobbies column */}
-              <Grid item xs={12} md={4}>
+              <Grid xs={12} md={4}>
                 <Paper 
                   elevation={darkMode ? 1 : 3} 
                   sx={{ 
@@ -955,7 +955,7 @@ export default function Home() {
             
             <Grid container spacing={4}>
               {/* Left column - Contact information */}
-              <Grid item xs={12} md={6}>
+              <Grid xs={12} md={6}>
                 <Typography 
                   variant="body1" 
                   color="text.secondary"
@@ -1039,7 +1039,7 @@ export default function Home() {
                 </Box>
               </Grid>
               {/* Right column - Contact form */}
-              <Grid item xs={12} md={6}>
+              <Grid xs={12} md={6}>
                 <Paper 
                   elevation={darkMode ? 1 : 3} 
                   sx={{ 
