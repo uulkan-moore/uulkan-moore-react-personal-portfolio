@@ -305,6 +305,13 @@ export default function Home() {
     "Redux", "Firebase", "Webpack", "TailwindCSS", "Figma"
   ];
 
+  // Hobbies to display next to skills
+  const hobbies = [
+    "Playing tennis",
+    "Reading books",
+    "Exploring new cafes/places"
+  ];
+
   // Function to smoothly scroll to different sections
   const scrollToSection = (elementId: string) => {
     const element = document.getElementById(elementId);
@@ -731,159 +738,191 @@ export default function Home() {
               right: '30%',
             }} 
           />
-          
           <Container maxWidth="md" sx={styles.sectionContainer}>
             {/* Section title */}
             <Typography variant="h3" component="h2" sx={styles.sectionTitle}>
-              Technical Skills
+              Technical Skills & Hobbies
             </Typography>
             <Divider sx={styles.divider} />
-            
-            {/* Skills content - using Paper component for card effect */}
-            <Paper 
-              elevation={darkMode ? 1 : 3} 
-              sx={{ 
-                p: 4, 
-                borderRadius: 4, 
-                background: darkMode ? 'rgba(19, 47, 76, 0.5)' : 'rgba(255, 255, 255, 0.8)',
-                backdropFilter: 'blur(10px)',
-                border: darkMode ? '1px solid rgba(255, 255, 255, 0.05)' : '1px solid rgba(0, 0, 0, 0.05)',
-              }}
-            >
-              <MuiGrid container spacing={6}>
-                {/* Left column - Frontend skills */}
-                <MuiGrid>
-                  <Typography 
-                    variant="h5" 
-                    component="h3" 
-                    fontWeight="600" 
-                    gutterBottom
-                    sx={{ 
-                      mb: 3,
-                      display: 'flex',
-                      alignItems: 'center',
-                      '&::before': {
-                        content: '""',
-                        display: 'inline-block',
-                        width: 4,
-                        height: 24,
-                        borderRadius: 2,
-                        backgroundColor: '#3a86ff',
-                        marginRight: 2,
-                      }
-                    }}
-                  >
-                    Frontend Development
-                  </Typography>
-                  <Box sx={{ mb: 5 }}>
-                    {frontendSkills.map((skill, index) => (
-                      <Box key={index} sx={{ mb: 4 }}>
-                        <Box sx={styles.skillLabel}>
-                          <Typography 
-                            variant="body1" 
-                            color="text.primary"
-                            fontWeight={500}
-                          >
-                            {skill.name}
-                          </Typography>
-                        </Box>
-                      </Box>
-                    ))}
-                  </Box>
-                </MuiGrid>
-                
-                {/* Right column - Backend skills */}
-                <MuiGrid>
-                  <Typography 
-                    variant="h5" 
-                    component="h3" 
-                    fontWeight="600" 
-                    gutterBottom
-                    sx={{ 
-                      mb: 3,
-                      display: 'flex',
-                      alignItems: 'center',
-                      '&::before': {
-                        content: '""',
-                        display: 'inline-block',
-                        width: 4,
-                        height: 24,
-                        borderRadius: 2,
-                        backgroundColor: '#ff006e',
-                        marginRight: 2,
-                      }
-                    }}
-                  >
-                    Backend Development
-                  </Typography>
-                  
-                  {/* Backend skills progress bars */}
-                  <Box sx={{ mb: 5 }}>
-                    {backendSkills.map((skill, index) => (
-                      <Box key={index} sx={{ mb: 4 }}>
-                        <Box sx={styles.skillLabel}>
-                          <Typography 
-                            variant="body1" 
-                            color="text.primary"
-                            fontWeight={500}
-                          >
-                            {skill.name}
-                          </Typography>
-                        </Box>
-                      </Box>
-                    ))}
-                  </Box>
-                </MuiGrid>
-              </MuiGrid>
-              
-              {/* Other technologies section */}
-              <Box sx={{ mt: 6 }}>
-                <Typography 
-                  variant="h5" 
-                  component="h3" 
-                  fontWeight="600" 
-                  gutterBottom
+            {/* Skills and Hobbies side by side */}
+            <MuiGrid container spacing={6}>
+              <MuiGrid item xs={12} md={8}>
+                <Paper 
+                  elevation={darkMode ? 1 : 3} 
                   sx={{ 
-                    mb: 3,
-                    display: 'flex',
-                    alignItems: 'center',
-                    '&::before': {
-                      content: '""',
-                      display: 'inline-block',
-                      width: 4,
-                      height: 24,
-                      borderRadius: 2,
-                      background: 'linear-gradient(to bottom, #3a86ff, #ff006e)',
-                      marginRight: 2,
-                    }
+                    p: 4, 
+                    borderRadius: 4, 
+                    background: darkMode ? 'rgba(19, 47, 76, 0.5)' : 'rgba(255, 255, 255, 0.8)',
+                    backdropFilter: 'blur(10px)',
+                    border: darkMode ? '1px solid rgba(255, 255, 255, 0.05)' : '1px solid rgba(0, 0, 0, 0.05)',
                   }}
                 >
-                  Other Technologies
-                </Typography>
-                
-                {/* Technology tags */}
-                <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1.5 }}>
-                  {otherTechnologies.map((tech) => (
-                    <Box 
-                      key={tech} 
-                      component="span" 
-                      sx={{
-                        ...styles.techTag,
-                        transition: 'all 0.2s ease',
-                        '&:hover': {
-                          transform: 'translateY(-3px)',
-                          boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
-                          color: theme.palette.primary.main,
-                          borderColor: theme.palette.primary.main,
+                  <MuiGrid container spacing={6}>
+                    {/* Left column - Frontend skills */}
+                    <MuiGrid item xs={12} sm={6}>
+                      <Typography 
+                        variant="h5" 
+                        component="h3" 
+                        fontWeight="600" 
+                        gutterBottom
+                        sx={{ 
+                          mb: 3,
+                          display: 'flex',
+                          alignItems: 'center',
+                          '&::before': {
+                            content: '""',
+                            display: 'inline-block',
+                            width: 4,
+                            height: 24,
+                            borderRadius: 2,
+                            backgroundColor: '#3a86ff',
+                            marginRight: 2,
+                          }
+                        }}
+                      >
+                        Frontend Development
+                      </Typography>
+                      <Box sx={{ mb: 5 }}>
+                        {frontendSkills.map((skill, index) => (
+                          <Box key={index} sx={{ mb: 4 }}>
+                            <Box sx={styles.skillLabel}>
+                              <Typography 
+                                variant="body1" 
+                                color="text.primary"
+                                fontWeight={500}
+                              >
+                                {skill.name}
+                              </Typography>
+                            </Box>
+                          </Box>
+                        ))}
+                      </Box>
+                    </MuiGrid>
+                    {/* Right column - Backend skills */}
+                    <MuiGrid item xs={12} sm={6}>
+                      <Typography 
+                        variant="h5" 
+                        component="h3" 
+                        fontWeight="600" 
+                        gutterBottom
+                        sx={{ 
+                          mb: 3,
+                          display: 'flex',
+                          alignItems: 'center',
+                          '&::before': {
+                            content: '""',
+                            display: 'inline-block',
+                            width: 4,
+                            height: 24,
+                            borderRadius: 2,
+                            backgroundColor: '#ff006e',
+                            marginRight: 2,
+                          }
+                        }}
+                      >
+                        Backend Development
+                      </Typography>
+                      <Box sx={{ mb: 5 }}>
+                        {backendSkills.map((skill, index) => (
+                          <Box key={index} sx={{ mb: 4 }}>
+                            <Box sx={styles.skillLabel}>
+                              <Typography 
+                                variant="body1" 
+                                color="text.primary"
+                                fontWeight={500}
+                              >
+                                {skill.name}
+                              </Typography>
+                            </Box>
+                          </Box>
+                        ))}
+                      </Box>
+                    </MuiGrid>
+                  </MuiGrid>
+                  {/* Other technologies section */}
+                  <Box sx={{ mt: 6 }}>
+                    <Typography 
+                      variant="h5" 
+                      component="h3" 
+                      fontWeight="600" 
+                      gutterBottom
+                      sx={{ 
+                        mb: 3,
+                        display: 'flex',
+                        alignItems: 'center',
+                        '&::before': {
+                          content: '""',
+                          display: 'inline-block',
+                          width: 4,
+                          height: 24,
+                          borderRadius: 2,
+                          background: 'linear-gradient(to bottom, #3a86ff, #ff006e)',
+                          marginRight: 2,
                         }
                       }}
                     >
-                      {tech}
+                      Other Technologies
+                    </Typography>
+                    {/* Technology tags */}
+                    <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1.5 }}>
+                      {otherTechnologies.map((tech) => (
+                        <Box 
+                          key={tech} 
+                          component="span" 
+                          sx={{
+                            ...styles.techTag,
+                            transition: 'all 0.2s ease',
+                            '&:hover': {
+                              transform: 'translateY(-3px)',
+                              boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+                              color: theme.palette.primary.main,
+                              borderColor: theme.palette.primary.main,
+                            }
+                          }}
+                        >
+                          {tech}
+                        </Box>
+                      ))}
                     </Box>
-                  ))}
-                </Box>
-              </Box>
-            </Paper>
+                  </Box>
+                </Paper>
+              </MuiGrid>
+              {/* Hobbies column */}
+              <MuiGrid item xs={12} md={4}>
+                <Paper 
+                  elevation={darkMode ? 1 : 3} 
+                  sx={{ 
+                    p: 4, 
+                    borderRadius: 4, 
+                    background: darkMode ? 'rgba(19, 47, 76, 0.5)' : 'rgba(255, 255, 255, 0.8)',
+                    backdropFilter: 'blur(10px)',
+                    border: darkMode ? '1px solid rgba(255, 255, 255, 0.05)' : '1px solid rgba(0, 0, 0, 0.05)',
+                    height: '100%',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                  }}
+                >
+                  <Typography 
+                    variant="h5" 
+                    component="h3" 
+                    fontWeight="600" 
+                    gutterBottom
+                    sx={{ mb: 3, textAlign: 'center' }}
+                  >
+                    Hobbies
+                  </Typography>
+                  <Box>
+                    {hobbies.map((hobby, idx) => (
+                      <Typography key={idx} variant="body1" sx={{ mb: 2, textAlign: 'center' }}>
+                        {hobby}
+                      </Typography>
+                    ))}
+                  </Box>
+                </Paper>
+              </MuiGrid>
+            </MuiGrid>
           </Container>
         </Box>
 
