@@ -36,7 +36,7 @@ import {
   createTheme, // Function to create a theme
   CssBaseline, // Resets CSS to a consistent baseline
   Divider, // Horizontal line separator
-  Grid as MuiGrid, // Layout grid system
+  Grid, // Layout grid system
   IconButton, // Button with just an icon
   Link, // Hyperlink component
   Paper, // Elevated surfaces
@@ -449,9 +449,9 @@ export default function Home() {
           </Box>
           
           <Container maxWidth="lg" sx={{ position: "relative", zIndex: 1 }}>
-            <MuiGrid container spacing={6} alignItems="center">
+            <Grid container spacing={6} alignItems="center">
               {/* Left side - Text content */}
-              <MuiGrid sx={{ mb: { xs: 4, md: 0 } }}>
+              <Grid item xs={12} md={6} sx={{ mb: { xs: 4, md: 0 } }}>
                 {/* Name and title */}
                 <Typography 
                   variant="h2" 
@@ -512,9 +512,9 @@ export default function Home() {
                     View Work
                   </Button>
                 </Box>
-              </MuiGrid>
+              </Grid>
               {/* Right side - Profile image */}
-              <MuiGrid sx={{ textAlign: "center" }}>
+              <Grid item xs={12} md={6} sx={{ textAlign: "center" }}>
                 <Box
                   sx={{
                     position: "relative",
@@ -548,8 +548,8 @@ export default function Home() {
                     priority
                   />
                 </Box>
-              </MuiGrid>
-            </MuiGrid>
+              </Grid>
+            </Grid>
           </Container>
         </Box>
 
@@ -745,8 +745,8 @@ export default function Home() {
             </Typography>
             <Divider sx={styles.divider} />
             {/* Skills and Hobbies side by side */}
-            <MuiGrid container spacing={6}>
-              <MuiGrid item xs={12} md={8}>
+            <Grid container spacing={6}>
+              <Grid item xs={12} md={8}>
                 <Paper 
                   elevation={darkMode ? 1 : 3} 
                   sx={{ 
@@ -757,9 +757,9 @@ export default function Home() {
                     border: darkMode ? '1px solid rgba(255, 255, 255, 0.05)' : '1px solid rgba(0, 0, 0, 0.05)',
                   }}
                 >
-                  <MuiGrid container spacing={6}>
+                  <Grid container spacing={6}>
                     {/* Left column - Frontend skills */}
-                    <MuiGrid item xs={12} sm={6}>
+                    <Grid item xs={12} sm={6}>
                       <Typography 
                         variant="h5" 
                         component="h3" 
@@ -797,9 +797,9 @@ export default function Home() {
                           </Box>
                         ))}
                       </Box>
-                    </MuiGrid>
+                    </Grid>
                     {/* Right column - Backend skills */}
-                    <MuiGrid item xs={12} sm={6}>
+                    <Grid item xs={12} sm={6}>
                       <Typography 
                         variant="h5" 
                         component="h3" 
@@ -837,8 +837,8 @@ export default function Home() {
                           </Box>
                         ))}
                       </Box>
-                    </MuiGrid>
-                  </MuiGrid>
+                    </Grid>
+                  </Grid>
                   {/* Other technologies section */}
                   <Box sx={{ mt: 6 }}>
                     <Typography 
@@ -886,9 +886,8 @@ export default function Home() {
                     </Box>
                   </Box>
                 </Paper>
-              </MuiGrid>
               {/* Hobbies column */}
-              <MuiGrid item xs={12} md={4}>
+              <Grid item xs={12} md={4}>
                 <Paper 
                   elevation={darkMode ? 1 : 3} 
                   sx={{ 
@@ -921,8 +920,9 @@ export default function Home() {
                     ))}
                   </Box>
                 </Paper>
-              </MuiGrid>
-            </MuiGrid>
+              </Grid>
+            </Grid>
+            </Grid>
           </Container>
         </Box>
 
@@ -953,9 +953,9 @@ export default function Home() {
             </Typography>
             <Divider sx={styles.divider} />
             
-            <MuiGrid container spacing={4}>
+            <Grid container spacing={4}>
               {/* Left column - Contact information */}
-              <MuiGrid>
+              <Grid item xs={12} md={6}>
                 <Typography 
                   variant="body1" 
                   color="text.secondary"
@@ -965,7 +965,6 @@ export default function Home() {
                   I&apos;m currently looking for new opportunities and freelance projects. If you&apos;d like to
                   discuss a potential collaboration or just want to say hi, feel free to reach out!
                 </Typography>
-                
                 {/* Contact methods - email and social links */}
                 <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
                   {/* Email link */}
@@ -986,7 +985,6 @@ export default function Home() {
                     <HiOutlineMail style={{ marginRight: '0.5rem' }} />
                     john.doe@example.com
                   </Link>
-                  
                   {/* Social media links */}
                   <Box sx={{ display: 'flex', gap: 2 }}>
                     <IconButton 
@@ -1039,10 +1037,9 @@ export default function Home() {
                     </IconButton>
                   </Box>
                 </Box>
-              </MuiGrid>
-              
+              </Grid>
               {/* Right column - Contact form */}
-              <MuiGrid>
+              <Grid item xs={12} md={6}>
                 <Paper 
                   elevation={darkMode ? 1 : 3} 
                   sx={{ 
@@ -1095,7 +1092,6 @@ export default function Home() {
                         }
                       }}
                     />
-                    
                     {/* Submit button */}
                     <Button
                       type="submit"
@@ -1119,8 +1115,8 @@ export default function Home() {
                     </Button>
                   </Box>
                 </Paper>
-              </MuiGrid>
-            </MuiGrid>
+              </Grid>
+            </Grid>
           </Container>
         </Box>
 
